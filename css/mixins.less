@@ -1,0 +1,218 @@
+
+
+/* -----------------------------------------
+   Variables
+----------------------------------------- */
+
+@color-white: #fff;
+@color-red: #FF3333;
+@color-orange: #ef841f;
+@color-gray-light: #999999;
+@color-gray-dark: #555;
+@color-black: #000000;
+
+
+/* -----------------------------------------
+   Mixins
+----------------------------------------- */
+
+
+.text-shadow(@x: 2px, @y: 2px, @blur: 2px, @alpha: 0.5) {
+  text-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+.drop-text-shadow(@string) {
+  text-shadow: @string;
+}
+
+
+
+
+
+
+.with-shadow(@pixel1: 3px, @pixel2: 3px, @pixel3: 3px, @opacity: 0.1) {
+  -webkit-box-shadow: rgba(0,0,0, @opacity) @pixel1 @pixel2 @pixel3;
+   -khtml-box-shadow: rgba(0,0,0, @opacity) @pixel1 @pixel2 @pixel3;
+     -moz-box-shadow: rgba(0,0,0, @opacity) @pixel1 @pixel2 @pixel3;
+          box-shadow: rgba(0,0,0, @opacity) @pixel1 @pixel2 @pixel3;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=@color-gray-light);
+}
+
+.box-shadow(@x: 3px, @y: 3px, @blur: 3px, @alpha: 0.1) {
+  .with-shadow(@x, @y, @blur, @alpha);
+}
+
+.inner-shadow(@x: 3px, @y: 3px, @blur: 3px, @alpha: 0.1) {
+  -webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+   -khtml-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+     -moz-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+          box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+.drop-shadow(@string) {
+  -webkit-box-shadow: @string;
+   -khtml-box-shadow: @string;
+     -moz-box-shadow: @string;
+          box-shadow: @string;
+}
+
+
+
+
+
+
+
+.gradient(@default, @startColor, @endColor, @left_position: 50%, @top_position: 0%) {
+	background-color: @default;
+	background-image: -webkit-gradient(linear, left @top_position, left endColor, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+	background-image: -moz-linear-gradient(@left_position @top_position, @startColor, @endColor);
+	background-image: -o-linear-gradient(top, @startColor, @endColor);
+	background-image: -ms-linear-gradient(top, @startColor, @endColor);
+	background-image: linear-gradient(top, @startColor, @endColor);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='@{startColor}', EndColorStr='@{endColor}');
+}
+
+.horizontal-gradient(@default, @startColor, @endColor) {
+  background-color: @default;
+  background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+  background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+  background-image: -moz-linear-gradient(left, @startColor, @endColor);
+  background-image: -ms-linear-gradient(left, @startColor, @endColor);
+  background-image: -o-linear-gradient(left, @startColor, @endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='@{startColor}', EndColorStr='@{endColor}');
+}
+
+
+
+
+
+.round-corners(@radius: 5px) {
+  -webkit-border-radius: @radius;
+   -khtml-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.border-radius(@radius: 5px) {
+  .round-corners(@radius);
+}
+
+.border-radiuses(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius:    @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius:  @bottomleft;
+  -webkit-border-top-left-radius:     @topleft;
+
+  -khtml-border-radius-topright:      @topright;
+  -khtml-border-radius-bottomright:   @bottomright;
+  -khtml-border-radius-bottomleft:    @bottomleft;
+  -khtml-border-radius-topleft:       @topleft;
+
+  -moz-border-radius-topright:        @topright;
+  -moz-border-radius-bottomright:     @bottomright;
+  -moz-border-radius-bottomleft:      @bottomleft;
+  -moz-border-radius-topleft:         @topleft;
+
+  border-top-right-radius:            @topright;
+  border-bottom-right-radius:         @bottomright;
+  border-bottom-left-radius:          @bottomleft;
+  border-top-left-radius:             @topleft;
+}
+
+
+
+
+
+.opacity(@opacity: 0.5) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+  opacity:          @opacity;
+}
+
+
+
+
+
+.animation(@name, @duration: 300ms, @delay: 0, @ease: ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation:    @name @duration @delay @ease;
+  -ms-animation:     @name @duration @delay @ease;
+}
+
+.transition(@property: all, @duration: 1s, @function: ease) {
+  -webkit-transition: @property @duration @function;
+  -moz-transition:    @property @duration @function;
+  -ms-transition:     @property @duration @function;
+  -o-transition:      @property @duration @function;
+}
+
+
+
+
+
+
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+  -o-transform:      @string;
+  transform:         @string;
+}
+
+.scale(@factor) {
+  -webkit-transform: scale(@factor);
+  -moz-transform:    scale(@factor);
+  -ms-transform:     scale(@factor);
+  -o-transform:      scale(@factor);
+  transform:         scale(@factor);
+}
+
+.rotate(@deg) {
+  -webkit-transform: rotate(@deg);
+  -moz-transform:    rotate(@deg);
+  -ms-transform:     rotate(@deg);
+  -o-transform:      rotate(@deg);
+  transform:         rotate(@deg);
+}
+
+.skew(@deg, @deg2) {
+  -webkit-transform: skew(@deg, @deg2);
+  -moz-transform:    skew(@deg, @deg2);
+  -ms-transform:     skew(@deg, @deg2);
+  -o-transform:      skew(@deg, @deg2);
+  transform:         skew(@deg, @deg2);
+}
+
+.translate(@x, @y:0) {
+  -webkit-transform: translate(@x, @y);
+  -moz-transform:    translate(@x, @y);
+  -ms-transform:     translate(@x, @y);
+  -o-transform:      translate(@x, @y);
+  transform:         translate(@x, @y);
+}
+
+.translate3d(@x, @y: 0, @z: 0) {
+  -webkit-transform: translate3d(@x, @y, @z);
+  -moz-transform:    translate3d(@x, @y, @z);
+  -ms-transform:     translate3d(@x, @y, @z);
+  -o-transform:      translate3d(@x, @y, @z);
+  transform:         translate3d(@x, @y, @z);
+}
+
+.perspective(@value: 1000) {
+  -webkit-perspective:  @value;
+  -moz-perspective:     @value;
+  -ms-perspective:      @value;
+  perspective:          @value;
+}
+
+.transform-origin(@x:center, @y:center) {
+  -webkit-transform-origin: @x @y;
+  -moz-transform-origin:    @x @y;
+  -ms-transform-origin:     @x @y;
+  -o-transform-origin:      @x @y;
+  transform-origin:         @x @y;
+}
+
+
