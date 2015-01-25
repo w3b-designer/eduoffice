@@ -141,7 +141,7 @@ form .form-control {
   border-radius: 0;
 }
 form.box-form {
-  padding: 10px 15px;
+  padding: 10px;
 }
 form .input-ico {
   padding-left: 40px;
@@ -181,9 +181,12 @@ form .input-ico.ico-office {
 .box-list li:last-child {
   border: none;
 }
+.box-list li.box-item-space {
+  padding: 10px !important;
+}
 .box-list a {
   color: #2d2d2d;
-  padding: 10px 15px !important;
+  padding: 10px !important;
   display: block;
 }
 .box-list a:hover {
@@ -197,6 +200,12 @@ form .input-ico.ico-office {
   font-size: 13px;
   font-size: 1.3rem;
   display: block;
+}
+.box-item-space {
+  padding: 10px 15px !important;
+}
+.box-ico img {
+  width: 18px;
 }
 .relative {
   position: relative;

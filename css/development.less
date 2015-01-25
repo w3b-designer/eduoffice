@@ -204,7 +204,7 @@ form {
 	}
 
 	&.box-form {
-		padding: 10px 15px;
+		padding: 10px;
 	}
 
 
@@ -254,11 +254,15 @@ form {
 			&:last-child {
 				border: none;
 			}
+
+			&.box-item-space {
+				padding: 10px !important;
+			}
 		}
 
 		a {
 			color: @gray;
-			padding: 10px 15px !important;
+			padding: 10px !important;
 			display: block;
 
 			&:hover {
@@ -275,6 +279,16 @@ form {
 			font-size: 13px;
 			font-size: 1.3rem;
 			display: block;
+		}
+	}
+
+	&-item-space {
+		padding: 10px 15px !important;
+	}
+
+	&-ico {
+		img {
+			width: 18px;
 		}
 	}
 }
