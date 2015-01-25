@@ -19,14 +19,18 @@ body {
 a {
   color: #33a646;
 }
+a:visited,
+a:focus {
+  color: #33a646;
+}
 a:hover {
   color: #33a646;
 }
 h1 {
-  font-size: 41px;
-  font-size: 4.1rem;
+  font-size: 27px;
+  font-size: 2.7rem;
   font-weight: normal;
-  margin: 0 0 20px;
+  margin: 0 0 5px;
 }
 h2 {
   color: #acacaa;
@@ -62,6 +66,12 @@ ul.reset li {
 .btn-success {
   background-color: #33a646;
 }
+.btn-heading {
+  margin-left: 15px;
+  position: relative;
+  top: -2px;
+  left: 0;
+}
 /* -----------------------------------------
    HEADER STYLES
 ----------------------------------------- */
@@ -73,7 +83,33 @@ ul.reset li {
   border-radius: 0;
 }
 .navbar-brand {
+  color: #fff !important;
   font-size: 21px;
+  margin-right: 20px;
+}
+.navbar-brand .logo-symbol {
+  color: #33a646;
+  padding-right: 5px;
+}
+.navbar .nav a {
+  color: #acacaa;
+  font-size: 13px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar .nav-ico {
+  text-align: center;
+  margin-bottom: 2px;
+  display: block;
+}
+.navbar .nav-ico img {
+  width: 20px;
+}
+.navbar .nav .active {
+  color: #222222;
+  background-color: #f4f4f1;
 }
 .breadcrumbs {
   color: #fff;
@@ -96,6 +132,34 @@ ul.reset li {
 ----------------------------------------- */
 .content {
   padding: 30px 0 60px;
+}
+/* -----------------------------------------
+ 	FORM STYLES
+----------------------------------------- */
+form .form-control {
+  border-color: #222222;
+  border-radius: 0;
+}
+form.box-form {
+  padding: 10px 15px;
+}
+form .input-ico {
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-position: 10px 50%;
+  background-size: 22px;
+}
+form .input-ico.ico-user {
+  background-image: url(../images/icons/svg/user.svg);
+}
+form .input-ico.ico-phone {
+  background-image: url(../images/icons/svg/phone.svg);
+}
+form .input-ico.ico-mail {
+  background-image: url(../images/icons/svg/mail.svg);
+}
+form .input-ico.ico-office {
+  background-image: url(../images/icons/svg/office.svg);
 }
 /* -----------------------------------------
  	BOX STYLES
