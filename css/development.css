@@ -32,6 +32,13 @@ h1 {
   font-weight: normal;
   margin: 0 0 5px;
 }
+h1 .subtitle {
+  color: #acacaa;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-top: 0px;
+  display: block;
+}
 h2 {
   color: #acacaa;
   font-size: 13px;
@@ -64,6 +71,7 @@ ul.reset li {
 	Buttons
 ----------------------------------------- */
 .btn-success {
+  color: #fff !important;
   background-color: #33a646;
 }
 .btn-heading {
@@ -176,7 +184,8 @@ form .input-ico.ico-office {
   font-size: 1.7rem;
   line-height: 120% !important;
   padding: 0 !important;
-  border-bottom: 1px solid #e4e4e4;
+  border-bottom: 1px dashed #e4e4e4;
+  position: relative;
 }
 .box-list li:last-child {
   border: none;
@@ -192,6 +201,9 @@ form .input-ico.ico-office {
 .box-list a:hover {
   text-decoration: none;
 }
+.box-list .box-list-item a {
+  display: inline;
+}
 .box-list .box-item-part {
   color: #acacaa;
 }
@@ -206,6 +218,23 @@ form .input-ico.ico-office {
 }
 .box-ico img {
   width: 18px;
+}
+.box-crop .box-item-title {
+  width: 83%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box-crop .box-item-part {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+}
+.box .dropdown-menu {
+  top: 28px;
+  right: 4px;
+  left: auto;
 }
 .relative {
   position: relative;
