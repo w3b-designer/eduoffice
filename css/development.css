@@ -26,6 +26,9 @@ a:focus {
 a:hover {
   color: #33a646;
 }
+a .green {
+  color: #33a646;
+}
 h1 {
   font-size: 27px;
   font-size: 2.7rem;
@@ -120,9 +123,10 @@ ul.reset li {
   background-color: #f4f4f1;
 }
 .breadcrumbs {
-  color: #fff;
+  color: #acacaa;
   padding: 2px 0 5px;
-  background-color: #2d2d2d;
+  background-color: #f4f4f1;
+  border-bottom: 1px dashed #acacaa;
 }
 .breadcrumbs ul {
   margin: 0;
@@ -145,7 +149,7 @@ ul.reset li {
  	FORM STYLES
 ----------------------------------------- */
 form .form-control {
-  border-color: #222222;
+  border-color: #acacaa;
   border-radius: 0;
 }
 form.box-form {
@@ -235,6 +239,18 @@ form .input-ico.ico-office {
   top: 28px;
   right: 4px;
   left: auto;
+}
+.circle {
+  background-color: #acacaa;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 1px;
+}
+.circle.green {
+  background-color: #33a646;
 }
 .relative {
   position: relative;
