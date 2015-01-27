@@ -36,8 +36,8 @@ a {
 		color: @green;
 	}
 
-	.green {
-		color: @green;
+	&.green {
+		color: @green !important;
 	}
 }
 
@@ -131,6 +131,7 @@ ul.reset {
 	&-brand {
 		color: #fff !important;
 		font-size: 21px;
+		font-weight: bold;
 		margin-right: 20px;
 
 		.logo-symbol {
@@ -310,6 +311,10 @@ form {
 	&-ico {
 		img {
 			width: 18px;
+
+			&.passive {
+				opacity: 0.15;
+			}
 		}
 	}
 
@@ -329,7 +334,12 @@ form {
 		}
 	}
 
+	.box-action {
 
+		a {
+			color: @green;
+		}
+	}
 
 	.dropdown-menu {
 		top: 28px;

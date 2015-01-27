@@ -26,8 +26,8 @@ a:focus {
 a:hover {
   color: #33a646;
 }
-a .green {
-  color: #33a646;
+a.green {
+  color: #33a646 !important;
 }
 h1 {
   font-size: 27px;
@@ -96,6 +96,7 @@ ul.reset li {
 .navbar-brand {
   color: #fff !important;
   font-size: 21px;
+  font-weight: bold;
   margin-right: 20px;
 }
 .navbar-brand .logo-symbol {
@@ -223,6 +224,9 @@ form .input-ico.ico-office {
 .box-ico img {
   width: 18px;
 }
+.box-ico img.passive {
+  opacity: 0.15;
+}
 .box-crop .box-item-title {
   width: 83%;
   display: inline-block;
@@ -234,6 +238,9 @@ form .input-ico.ico-office {
   position: absolute;
   top: 9px;
   right: 8px;
+}
+.box .box-action a {
+  color: #33a646;
 }
 .box .dropdown-menu {
   top: 28px;
