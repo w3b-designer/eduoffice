@@ -267,6 +267,10 @@ form {
 			border-bottom: 1px dashed #e4e4e4;
 			position: relative;
 
+			&:first-child {
+				border-top: 1px dashed #e4e4e4;
+			}
+
 			&:last-child {
 				border: none;
 			}
@@ -278,7 +282,7 @@ form {
 
 		a {
 			color: @gray;
-			padding: 10px !important;
+			padding: 10px 0 !important;
 			display: block;
 
 			&:hover {
@@ -298,8 +302,8 @@ form {
 
 		.box-item-date {
 			color: @gray-light;
-			font-size: 13px;
-			font-size: 1.3rem;
+			font-size: 14px;
+			font-size: 1.4rem;
 			display: block;
 		}
 	}
@@ -365,6 +369,83 @@ form {
 
 }
 
+.darkbox {
+
+	.container.white {
+		background-color: #fff;
+		padding: 0;
+		box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	}
+
+	.top-title {
+		background-color: #fafaf9;
+		/*border-bottom: 1px solid #eaeaea;*/
+		padding: 15px 15px 0;
+
+	}
+
+	.box {
+		background-color: transparent;
+	}
+
+	.main {
+		padding: 15px;
+	}
+
+	h2 {
+		font-size: 21px;
+		color: #222222;
+		font-weight: normal;
+		text-transform: none;
+    	margin: 0 0 5px;
+	}
+
+	.graybox {
+		background-color: #e4e4e2;
+		padding: 15px;
+
+	}
+
+	.box-item-title {
+		font-size: 17px;
+		font-weight: normal;
+	}
+	.box {
+		background-color: #transparent;
+
+		&-list {
+			margin-bottom: 0;
+
+			li {
+				font-size: 17px;
+				font-size: 1.7rem;
+				line-height: 120% !important;
+				padding: 0 !important;
+				border-bottom: 1px dashed #ccc;
+				position: relative;
+
+				&:first-child {
+					border-top: 1px dashed #e4e4e4;
+				}
+
+				&:last-child {
+					border: none;
+				}
+			}
+		}
+	}
+
+	.no-date {
+		padding-bottom: 5px;
+		border-bottom: 2px solid #3399cc;
+	}
+	.ok-date {
+		padding-bottom: 5px;
+		border-bottom: 2px solid #009b4f;
+	}
+
+}
+
 
 .relative {
     position: relative;
@@ -414,6 +495,12 @@ form {
 .large-padding-on-right {
     padding-right: 30px;
 }
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .no-padding-on-top {
     padding-top: 0;
 }
@@ -435,7 +522,7 @@ form {
     margin-top: 15px;
 }
 .margin-on-bottom {
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
 }
 .margin-top-bottom {
     margin-top: 15px;
