@@ -280,6 +280,10 @@ form {
 			}
 		}
 
+		&.box-crop li:first-child {
+			border-top: none;
+		}
+
 		a {
 			color: @gray;
 			padding: 10px 0 !important;
@@ -331,13 +335,14 @@ form {
 			text-overflow: ellipsis;
 		}
 
+
 		.box-item-part {
 			position: absolute;
 			top: 9px;
 			right: 8px;
 		}
 	}
-
+	
 	.box-action {
 
 		a {
@@ -378,9 +383,9 @@ form {
 	}
 
 	.top-title {
-		background-color: #fafaf9;
-		/*border-bottom: 1px solid #eaeaea;*/
-		padding: 15px 15px 0;
+		background-color: #f6f6f2;
+		border-bottom: 1px solid #eaeaea;
+		padding: 15px 15px;
 
 	}
 
@@ -406,10 +411,17 @@ form {
 
 	}
 
+	.whitebox {
+		background-color: #ffffff;
+		padding: 15px;
+
+	}
+
 	.box-item-title {
 		font-size: 17px;
 		font-weight: normal;
 	}
+
 	.box {
 		background-color: #transparent;
 
@@ -442,6 +454,35 @@ form {
 	.ok-date {
 		padding-bottom: 5px;
 		border-bottom: 2px solid #009b4f;
+	}
+
+	h5 {
+		text-transform: uppercase;
+	}
+
+	.left-menu {
+		background-color: #f6f6f4;
+		margin-top:-15px;
+
+		.list-group-item.active {
+			color: #222;
+			background-color: #fff;
+			border-color: #ddd;
+			
+		}
+
+		.list-group-item.active:after {
+			font-family:'Glyphicons Halflings';
+			color: #808080;
+			display: inline-block;
+			content: "\e013";
+			position: relative;
+			left: 60%;
+		}
+	}
+
+	.filter {
+
 	}
 
 }

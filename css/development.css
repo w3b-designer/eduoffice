@@ -201,6 +201,9 @@ form .input-ico.ico-office {
 .box-list li.box-item-space {
   padding: 10px !important;
 }
+.box-list.box-crop li:first-child {
+  border-top: none;
+}
 .box-list a {
   color: #2d2d2d;
   padding: 10px 0 !important;
@@ -268,9 +271,9 @@ form .input-ico.ico-office {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .darkbox .top-title {
-  background-color: #fafaf9;
-  /*border-bottom: 1px solid #eaeaea;*/
-  padding: 15px 15px 0;
+  background-color: #f6f6f2;
+  border-bottom: 1px solid #eaeaea;
+  padding: 15px 15px;
 }
 .darkbox .box {
   background-color: transparent;
@@ -287,6 +290,10 @@ form .input-ico.ico-office {
 }
 .darkbox .graybox {
   background-color: #e4e4e2;
+  padding: 15px;
+}
+.darkbox .whitebox {
+  background-color: #ffffff;
   padding: 15px;
 }
 .darkbox .box-item-title {
@@ -320,6 +327,26 @@ form .input-ico.ico-office {
 .darkbox .ok-date {
   padding-bottom: 5px;
   border-bottom: 2px solid #009b4f;
+}
+.darkbox h5 {
+  text-transform: uppercase;
+}
+.darkbox .left-menu {
+  background-color: #f6f6f4;
+  margin-top: -15px;
+}
+.darkbox .left-menu .list-group-item.active {
+  color: #222;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.darkbox .left-menu .list-group-item.active:after {
+  font-family: 'Glyphicons Halflings';
+  color: #808080;
+  display: inline-block;
+  content: "\e013";
+  position: relative;
+  left: 60%;
 }
 .relative {
   position: relative;
