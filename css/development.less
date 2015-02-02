@@ -25,6 +25,10 @@ body {
 	font-size: 15px;
 }
 
+body.whitebg {
+
+}
+
 a {
 	color: @green;
 
@@ -132,7 +136,7 @@ ul.reset {
 		color: #fff !important;
 		font-size: 21px;
 		font-weight: bold;
-		margin-right: 20px;
+		margin-right: 45px;
 
 		.logo-symbol {
 			color: @green;
@@ -143,28 +147,71 @@ ul.reset {
 	.nav {
 		a {
 			color: @gray-light;
-			font-size: 13px;
-			font-size: 1.3rem;
+			font-size: 14px;
+			font-size: 1.4rem;
 			text-transform: uppercase;
-			padding-top: 5px;
-			padding-bottom: 5px;
+			padding: 16px 5px 11px;
+			margin-right: 45px;
+			.transition (@duration: 0.5s);
+
+			&:hover, &:focus{
+				color: #ffffff;
+				background-color: transparent;
+
+
+				img {
+					opacity: 1;
+				}
+			}
+
 		}
 
 		&-ico {
 			text-align: center;
-			margin-bottom: 2px;
-			display: block;
+			margin-bottom: 5px;
+			display: inline;
+			margin-right: 10px;
 
 			img {
+				opacity: 0.5;
 				width: 20px;
+				.transition (@duration: 0.5s);
 			}
 		}
 
 		.active {
-			color: @gray-dark;
-			background-color: #f4f4f1;
+			color: #ffffff;
+			background-color: transparent;
+			border-bottom: 3px solid @green;
+
+			img {
+				opacity: 1;
+			}
 		}
 	}
+}
+
+.navigation-second {
+	background-color: #f4f4f2;
+	min-height: 50px;
+
+	ul.nav-tabs {
+		text-align: center;
+		margin: 0;
+		padding-top: 10px;
+
+
+		li {
+			display: inline-block;
+			float: none;
+
+			&.active {
+				font-weight: bold;
+				border-bottom: 1px solid #fff;
+			}
+		}
+	}
+
 }
 
 .breadcrumbs {
@@ -379,7 +426,7 @@ form {
 	.container.white {
 		background-color: #fff;
 		padding: 0;
-		box-shadow: 0 0 5px rgba(0,0,0,0.1);
+		
 	}
 
 	.top-title {
@@ -461,7 +508,7 @@ form {
 	}
 
 	.left-menu {
-		background-color: #f6f6f4;
+		background-color: #f4f4f2;
 		margin-top:-15px;
 
 		.list-group-item.active {
@@ -474,10 +521,9 @@ form {
 		.list-group-item.active:after {
 			font-family:'Glyphicons Halflings';
 			color: #808080;
-			display: inline-block;
 			content: "\e013";
 			position: relative;
-			left: 60%;
+			float:right;
 		}
 	}
 
