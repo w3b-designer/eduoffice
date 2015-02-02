@@ -233,16 +233,13 @@ form .input-ico.ico-office {
   position: relative;
 }
 .box-list li:first-child {
-  border-top: 1px dashed #e4e4e4;
+  border-top: 1px dashed #000;
 }
 .box-list li:last-child {
   border: none;
 }
 .box-list li.box-item-space {
   padding: 10px !important;
-}
-.box-list.box-crop li:first-child {
-  border-top: none;
 }
 .box-list a {
   color: #2d2d2d;
@@ -354,7 +351,7 @@ form .input-ico.ico-office {
   position: relative;
 }
 .darkbox .box-list li:first-child {
-  border-top: 1px dashed #e4e4e4;
+  border-top: none;
 }
 .darkbox .box-list li:last-child {
   border: none;
