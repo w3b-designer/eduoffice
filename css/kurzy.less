@@ -21,8 +21,8 @@
 body {
 	background-color: #fff;
 	line-height: 150%;
-	font-size: 1.5rem;
-	font-size: 15px;
+	font-size: 1.4rem;
+	font-size: 14px;
 }
 
 a {
@@ -41,11 +41,15 @@ a {
 	}
 }
 
+.list-group-item {
+	padding: 15px;
+}
 
 a.list-group-item .list-group-item-heading {
 	color: #428bca;
 	font-size: 17px;
 	margin-bottom: 0;
+	line-height: 21px;
 }
 
 .list-group-item-heading.crop {
@@ -61,7 +65,7 @@ a.list-group-item .list-group-item-heading {
 	font-size: 14px;
 	font-weight: normal;
 	color: #555;
-	margin-bottom: 5px;
+	margin: 0;
 }
 
 .list-group-item 
@@ -191,7 +195,7 @@ ul.reset {
 
 		a {
 			color: @gray;
-			padding: 10px 15px !important;
+			padding: 15px !important;
 			display: block;
 
 			&:hover {
@@ -199,10 +203,9 @@ ul.reset {
 			}
 		}
 
-		.box-list-item {
-			a {
+		.box-list-item a {
+			padding: 15px;
 				display: inline;
-			}
 		}
 
 		.box-item-date, .box-item-part {
